@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MMA - Karma Dövüş Sanatları</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Global Styles */
+        body {
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+        h1, h2 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            color: #e63946;
+        }
+        header {
+            background: linear-gradient(135deg, #000000, #3a3a3a);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Hamburger Menu */
+        .menu {
+            position: relative;
+            z-index: 1000;
+        }
+        .menu-button {
+            background-color: #1e1e1e;
+            color: white;
+            border: none;
+            padding: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 3px;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-button .bar {
+            width: 20px;
+            height: 2px;
+            background-color: #e63946;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+        
+
+.menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-content.active {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-content {
+        font-size: 1.2em;
+    }
+}
+
+.menu-content {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-content.active {
+    display: flex;
+}
+
+.menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-content.active {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-content {
+        font-size: 1.2em;
+    }
+}
+
+.menu-content {
+
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .menu-content a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8em;
+            margin: 15px 0;
+            transition: color 0.3s ease;
+        }
+        .menu-content a:hover {
+            color: #99f2c8;
+        }
+        .menu-content.active {
+            display: flex;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #e63946;
+        }
+        section p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #f5f5f5;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .menu-content a {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
+<style>
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .whatsapp-button:hover {
+        background-color: #1eb954;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<style>
+    #passwordModal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10000;
+    }
+    #passwordBox {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-width: 300px;
+        width: 80%;
+    }
+    #passwordBox h2 {
+        font-size: 1.5em;
+        color: #e63946;
+        margin-bottom: 15px;
+    }
+    #passwordBox input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    #passwordBox button {
+        background-color: #e63946;
+        color: #f5f5f5;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    #passwordBox button:hover {
+        background-color: #f77b84;
+    }
+</style>
+<div id="passwordModal">
+<div id="passwordBox">
+<h2>Siteye Giriş</h2>
+<input id="passwordInput" placeholder="Şifreyi Girin" type="password"/>
+<button onclick="checkPassword()">Giriş Yap</button>
+</div>
+</div>
+<script>
+    const correctPassword = "2025";
+    function checkPassword() {
+        const userInput = document.getElementById("passwordInput").value;
+        if (userInput === correctPassword) {
+            document.getElementById("passwordModal").style.display = "none";
+            document.getElementById("siteContent").style.display = "block";
+            alert("Şifre doğru! Siteye hoş geldiniz.");
+        } else {
+            alert("Yanlış şifre! Tekrar deneyin.");
+        }
+    }
+</script>
+<div id="siteContent" style="display: none;">
+<header>
+<h1>MMA - Karma Dövüş Sanatları</h1>
+</header>
+<div class="menu">
+<button class="menu-button" onclick="toggleMenu()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</button>
+<div class="menu-content" id="menu-content"><a href="#nedir">MMA Nedir?</a><a href="#tarihce">MMA Tarihçesi</a><a href="#teknikler">Kullanılan Teknikler</a><a href="#avantajlar">Avantajlar</a><a href="#faydalar">Sağlık ve Fiziksel Faydaları</a><a href="#diger">Sosyal Hayatınızdaki Etkileri</a><a href="#tehlike">Tehlikeli Mi?</a><a href="#silah">Ayaklı Silah</a><a href="#dovus-filmleri">Dövüş Filmleri ve MMA</a></div>
+</div>
+<script>
+    function toggleMenu() {
+        const menuContent = document.getElementById('menu-content');
+        menuContent.classList.toggle('active');
+    }
+</script>
+<section id="nedir">
+<h2>MMA Nedir?</h2>
+<p>MMA, yani Karma Dövüş Sanatları, dövüşçülerin birden fazla dövüş tekniğini kullanabildiği bir spor dalıdır. MMA, dövüşçülerin boks, güreş, Muay Thai, Brezilya jiu-jitsu (BJJ) ve daha fazlasını bir araya getirerek ringde etkili olmasını sağlar. Bu spor, dayanıklılık, strateji ve gücü birleştirir.</p>
+<p>MMA, yalnızca profesyonel dövüşçüler için değil, aynı zamanda fitness, öz savunma ve disiplin arayan bireyler için de harika bir seçimdir. 
+Bu spor, dayanıklılık geliştirmek, kendine güven kazanmak ve genel sağlık durumunu iyileştirmek isteyen herkese hitap eder. 
+MMA, kişisel gelişim ve fiziksel zindelik arayanlar için mükemmel bir aktivitedir.</p>
+
+
+</section><section id="tarihce">
+<h2>MMA Tarihçesi</h2>
+<p>MMA, yani Karma Dövüş Sanatları, antik dönemlere kadar uzanan bir geçmişe sahiptir. Eski Yunan'daki pankration, bugünkü MMA'nın temelini oluşturmuştur. Modern MMA ise 1993 yılında ilk kez düzenlenen UFC (Ultimate Fighting Championship) organizasyonu ile dünya çapında popülerlik kazanmıştır. Bu spor, farklı dövüş disiplinlerini birleştirmesiyle diğer dövüş sporlarından ayrılmıştır ve hızla büyüyen bir izleyici kitlesine sahiptir.</p>
+</section><section id="teknikler">
+<h2>MMA'da Hangi Dövüş Teknikleri Kullanılır?</h2>
+<p>MMA dövüşçüleri, ayakta dövüşme ve yer dövüşü yapabilme yeteneğine sahiptir. Aşağıdaki teknikler en yaygın kullanılanlardır:</p>
+<ul>
+<li><strong>Boks:</strong> Yumruk teknikleri ile rakibe saldırmak.</li>
+<li><strong>Muay Thai:</strong> Diz, dirsek ve tekme gibi vuruş teknikleri.</li>
+<li><strong>BJJ:</strong> Yerde mücadele ve rakibi teslim alma teknikleri.</li>
+<li><strong>Güreş:</strong> Rakibi yere düşürme ve kontrol etme.</li>
+</ul>
+</section><section id="avantajlar">
+<h2>Diğer Dövüş Sporlarına Karşı Neden Avantajlıdır?</h2>
+<p>MMA, yalnızca bir dövüş tekniğine dayalı olmayan çok yönlü bir spordur. Boks, kickboks gibi sporlar yalnızca ayakta dövüşme üzerine odaklanırken, MMA dövüşçüleri yerde ve ayakta aynı derecede güçlüdürler. Bu, dövüşçüye büyük bir avantaj sağlar.</p>
+</section><section id="faydalar">
+<h2>MMA'nin Sağlık ve Fiziksel Faydaları</h2>
+<p>MMA, yalnızca dövüşçüler için değil, her yaştan insan için eşsiz faydalar sunar. İşte bu harika sporun bazı sağlık ve fiziksel avantajları:</p>
+<ul>
+<li><strong>Kardiyovasküler Sağlık:</strong> Yüksek yoğunluklu antrenmanlar, kalp ve damar sağlığını güçlendirerek daha uzun bir ömür sağlar.</li>
+<li><strong>Kas Gücü ve Dayanıklılık:</strong> Tüm vücudu çalıştıran kapsamlı hareketler sayesinde kas kütlesi artar, güç ve dayanıklılık kazanılır.</li>
+<li><strong>Esneklik ve Denge:</strong> MMA teknikleri, vücudu daha esnek hale getirir ve hareket kabiliyetini artırır. Ayrıca denge yeteneği gelişir.</li>
+<li><strong>Stres ve Anksiyete Azaltma:</strong> Fiziksel aktiviteler endorfin salgısını artırarak ruh halinizi iyileştirir ve stresle başa çıkmanıza yardımcı olur.</li>
+<li><strong>Hızlı Kilo Kaybı:</strong> Yoğun kalori yakımı ile MMA, kilo vermek ve formda kalmak için ideal bir spordur.</li>
+<li><strong>Özgüven Artışı:</strong> Kendinizi daha güçlü, hızlı ve kontrollü hissetmek özgüveninizi yükseltir.</li>
+<li><strong>Savunma Becerileri:</strong> MMA, yalnızca bir spor değil, aynı zamanda sizi koruyacak etkili bir savunma sistemidir.</li>
+<li><strong>Zihinsel Dayanıklılık:</strong> MMA, strateji ve hızlı düşünmeyi gerektirir. Bu da zihinsel kapasitenizi ve dayanıklılığınızı artırır.</li>
+<li><strong>Sosyal Bağlantılar:</strong> MMA toplulukları, yeni arkadaşlıklar kurmak ve takım ruhu geliştirmek için mükemmel fırsatlar sunar.</li>
+</ul>
+</section><section id="diger">
+<h2>Sosyal Hayatınızdaki Etkileri</h2>
+<p>MMA, sadece dövüşçülere ringde değil, günlük yaşamda da birçok avantaj sağlar. Bu spor, özgüven, disiplin, stratejik düşünme ve fiziksel dayanıklılık gibi beceriler kazandırır. Ayrıca, dövüşçüler stresle başa çıkma konusunda da yetkin hale gelirler.</p>
+</section><section id="tehlike">
+<h2>Neden En Tehlikeli Dövüş Sanatıdır?</h2>
+<p>MMA'nın tehlikeli olmasının en büyük nedeni, dövüşçülerin farklı tekniklerle hem ayakta hem de yerde savaşıyor olmalarıdır. Bu çok yönlülük, kazaların ve yaralanmaların daha sık meydana gelmesine yol açar.</p>
+</section><section id="silah">
+<h2>MMA Sizi Neden Dışarıda Ayaklı Bir Silah Yapar?</h2>
+<p>MMA, fiziksel dayanıklılığın yanı sıra zihinsel dayanıklılık ve hızlı karar verme becerilerini geliştirir. Bu yetenekler, herhangi bir stresli veya tehlikeli durumda hızlı ve etkili hareket etmenizi sağlar. MMA ile hem kendinizi koruma hem de çevrenizdeki insanları güvende tutma konusunda üst düzey becerilere sahip olabilirsiniz. Bu sizi gerçek anlamda bir "ayaklı silah" yapar.</p>
+</section><section id="dovus-filmleri">
+<h2>Dövüş Filmleri Neden Genellikle MMA Üzerine Yoğunlaşır?</h2>
+<p>Dövüş filmleri, izleyicilere aksiyon, drama ve heyecanı aynı anda sunmayı hedefler. MMA, çok yönlü dövüş teknikleri, strateji ve yoğun fiziksel mücadeleyle bu tür filmler için ideal bir tema oluşturur. MMA'nın "kafes dövüşü" olarak da bilinen formatı, kapalı bir alanın getirdiği gerginlik ve doğrudan çatışma hissiyle izleyicilere görsel bir şölen sunar.</p>
+<p>Boyka serisi gibi filmler, MMA'nın estetik ve sert yapısını beyaz perdeye taşır. Örneğin, Scott Adkins'in canlandırdığı Boyka karakteri, dövüş sporlarının teknik derinliğini ve fiziksel zorluğunu etkileyici bir şekilde sergiler. Bu tür filmler, hem dövüş sanatlarıyla ilgilenenler hem de aksiyon severler için unutulmaz sahneler içerir.</p>
+<p>Sinema, MMA'yı sadece bir spor olarak değil, aynı zamanda hikaye anlatımında bir araç olarak kullanır. Dövüşçülerin zorlu geçmişleri, motivasyonları ve mücadeleleri, seyirciye hem dramatik hem de görsel bir deneyim sunar. MMA'nın çeşitli teknikleri ve dinamik yapısı, sinematik anlatımı güçlendirir ve izleyiciyi koltuğa bağlayan sahneler yaratır.</p>
+</section></div>
+<footer>
+<p>© 2024 TÜM HAKLARI TAHA YILDIRHAN DEMİR AİTTİR.</p>
+</footer>
+<a href="https://wa.me/905387687426" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 35px; height: 35px;">
+</a>
+</body>
+</html>
